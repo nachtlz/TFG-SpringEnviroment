@@ -21,3 +21,4 @@ Spring Cloud Gateway (API Gateway): https://github.com/nachtlz/docugenie-gateway
 
 Spring Eureka Client (Service registry): https://github.com/nachtlz/docugenie-service-registry
 
+![Data](https://github.com/nachtlz/TFG-SpringEnviroment/assets/62239934/530062d6-839d-4d81-b9d6-a927abd313b9)
