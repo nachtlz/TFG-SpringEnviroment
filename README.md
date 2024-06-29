@@ -1,17 +1,17 @@
-# Entorno Spring para el TFG
-El Trabajo de Fin de Grado (TFG) se centra en el diseño e implementación de un sistema basado en microservicios para desarrollar una aplicación web destinada a la creación de asistentes virtuales entrenados con conocimiento privado.
+# Spring enviroment for Final Degree Project
+The Final Degree Project (TFG) focuses on the design and implementation of a microservices-based system to develop a web application for creating virtual assistants trained with private knowledge.
 
-La base de datos de este proyecto almacena información de personas, quienes tienen asociados chats. Estos chats se entrenan utilizando archivos, por lo que es necesario mantener un registro de los archivos asociados a cada chat. Además, como es natural, entre el usuario y el asistente se produce una conversación, por lo que se guardan los mensajes de cada chat.
+The database of this project stores information about individuals, who have associated chats. These chats are trained using files, so it is necessary to keep track of the files associated with each chat. Additionally, as expected, there is a conversation between the user and the assistant, so the messages in each chat are stored.
 
-Para la persistencia de los datos, se ha creado un entorno Spring (Spring Data JPA), donde se implementa una API REST con una capa de seguridad mediante un proceso de autenticación.
+For data persistence, a Spring environment (Spring Data JPA) has been created, where a REST API is implemented with a security layer through an authentication process.
 
-El sistema cuenta principalmente con una API Gateway (Spring Cloud Gateway) que funciona como un Load Balancer y aplica un filtro de seguridad. Cuando llega una petición, la API Gateway la redirige al microservicio correspondiente y aplica el filtro de autenticación.
+The system mainly includes an API Gateway (Spring Cloud Gateway) that functions as a Load Balancer and applies a security filter. When a request arrives, the API Gateway redirects it to the desired microservice and applies the authentication filter.
 
-Este filtro de autenticación se basa en el estándar JWT, utilizando un microservicio que registra usuarios y crea y valida los tokens. Por lo tanto, antes de redirigir la petición a otro microservicio, la API Gateway valida el JWT con el microservicio de identidad (Spring Security).
+This authentication filter is based on the JWT standard, with a microservice that registers users and creates and validates tokens. Therefore, before redirecting the request to another microservice, the API Gateway validates the JWT with the identity microservice (Spring Security).
 
-Finalmente, se utiliza un registro de servicios mediante Netflix Eureka Client, donde cada microservicio del entorno se registra para facilitar la comunicación y coordinación entre ellos.
+Finally, a service registry is used via Netflix Eureka Client, where each microservice in the environment registers to facilitate communication and coordination among them.
 
-## Componentes
+## Component Repositories
 
 Spring Data JPA (APIREST): https://github.com/nachtlz/docugeniedb
 
