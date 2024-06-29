@@ -12,7 +12,7 @@ Este filtro de autenticación se basa en el estándar JWT, utilizando un microse
 Finalmente, se utiliza un registro de servicios mediante Netflix Eureka Client, donde cada microservicio del entorno se registra para facilitar la comunicación y coordinación entre ellos.
 
 ## Componentes
-```
+
 Spring Data JPA (APIREST): https://github.com/nachtlz/docugeniedb
 
 Spring Security (Identity Service): https://github.com/nachtlz/identity-service
@@ -20,4 +20,4 @@ Spring Security (Identity Service): https://github.com/nachtlz/identity-service
 Spring Cloud Gateway (API Gateway): https://github.com/nachtlz/docugenie-gateway
 
 Spring Eureka Client (Service registry): https://github.com/nachtlz/docugenie-service-registry
-```
+
